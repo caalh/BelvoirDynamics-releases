@@ -23,11 +23,11 @@ A professional text editor and 3D visualization tool for MCNP, OpenMC, and Serpe
 
 ## Features (Beta v0.9.0)
 
-✅ **Multi-Tab Editor** - Professional code editor with syntax highlighting for MCNP, OpenMC, and Serpent  
-✅ **3D Geometry Preview** - Interactive visualization with rotation and zoom  
-✅ **Built-In Templates** - Quick-start PWR assemblies, pin cells, and reactor cores  
-✅ **Numeric Highlighting** - Occurrence tracking with minimap navigation  
-✅ **Keyboard Shortcuts** - Ctrl+S, Ctrl+O, Ctrl+T, Ctrl+W, F5  
+**Multi-Tab Editor** - Professional code editor with syntax highlighting for MCNP, OpenMC, and Serpent  
+**3D Geometry Preview** - Interactive visualization with rotation and zoom  
+**Built-In Templates** - Quick-start PWR assemblies, pin cells, and reactor cores  
+**Numeric Highlighting** - Occurrence tracking with minimap navigation  
+**Keyboard Shortcuts** - Ctrl+S, Ctrl+O, Ctrl+T, Ctrl+W, F5  
 
 ---
 
