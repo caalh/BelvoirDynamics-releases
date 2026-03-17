@@ -1,73 +1,91 @@
-# OWEN - Open Workflow for Engineered Neutronics
+# OWEN — Open Workflow for Engineered Neutronics
 
-**Official Releases for DynamicMC Editor**
+**A DynamicMC Product** | [ReactorMC](https://reactormc.com)
 
-A professional text editor and 3D visualization tool for MCNP, OpenMC, and Serpent input files.
+> **DynamicMC** is the software development division of [ReactorMC](https://reactormc.com).
+> **OWEN** is the first product from DynamicMC — a professional code editor and 3D
+> visualization tool for reactor physics simulations.
 
 ---
 
-## Download
+## What is OWEN?
 
-### Latest Release: v0.9.0 Beta
+OWEN is a desktop text editor built for nuclear engineers. It supports four Monte Carlo
+neutron transport codes:
 
-**Windows Installer (64-bit):**  
-[Download DynamicMC-Setup-v0.9.0.exe](https://github.com/caalh/owen-releases/releases/download/v0.9.0-beta/DynamicMC-Setup-v0.9.0.exe)
+- **MCNP** input files
+- **OpenMC** Python models
+- **Serpent 2** input decks
+- **SCONE** input files
 
-**System Requirements:**
+## Features
+
+- Multi-tab code editor with syntax highlighting for all four codes
+- 3D geometry preview (PyVista) — visualize your reactor models
+- 2D cross-section views (radial XY, axial XZ)
+- **Lattice Builder** — visual grid tool to create lattice fill maps (MCNP, OpenMC, Serpent)
+- Built-in templates — start quickly with pin cells, assemblies, and core models
+- Smart analysis — automatic language detection and diagnostics
+- MCNP ↔ OpenMC bidirectional converter (experimental)
+- Dark and Marble themes
+- Block/column selection (Alt+drag or toggle button)
+- Standard shortcuts (Ctrl+S, Ctrl+O, Ctrl+T, etc.)
+- File tree navigation with minimap
+
+## Quick Start
+
+1. **Open a template**: Select from the dropdown, click "Load"
+2. **Edit your model**: Make changes in the editor
+3. **Build a lattice**: Click "Lattice Builder" or right-click → "Insert Lattice..."
+4. **Generate 3D preview**: Switch to "3D Preview" tab, select source, click "Generate"
+5. **Save your work**: Press Ctrl+S or click "Save"
+
+## Project Structure
+
+```
+DynamicMC/
+├── src/dynamicmc/      # Application source code
+├── src/templates/      # Bundled template input files
+├── assets/             # Icons and fonts
+├── docs/               # Documentation (BUILD_GUIDE, USER_GUIDE, etc.)
+├── scripts/            # Utility scripts (icon generators, build helpers)
+├── installer/          # Inno Setup installer script
+├── tests/              # pytest tests
+├── launcher.py         # PyInstaller entry point
+├── build_installer.py  # Build script
+└── requirements.txt    # Python dependencies
+```
+
+## System Requirements
+
 - Windows 10 or Windows 11 (64-bit)
 - 4 GB RAM minimum (8 GB recommended)
 - 500 MB free disk space
-- OpenGL 3.3+ compatible graphics card
-
----
-
-## Features (Beta v0.9.0)
-
-**Multi-Tab Editor** - Professional code editor with syntax highlighting for MCNP, OpenMC, and Serpent  
-**3D Geometry Preview** - Interactive visualization with rotation and zoom  
-**Built-In Templates** - Quick-start PWR assemblies, pin cells, and reactor cores  
-**Numeric Highlighting** - Occurrence tracking with minimap navigation  
-**Keyboard Shortcuts** - Ctrl+S, Ctrl+O, Ctrl+T, Ctrl+W, F5  
-
----
+- OpenGL 3.3+ compatible graphics
 
 ## Documentation
 
-- **Website:** [https://reactormc.net/owen](https://reactormc.net/owen)
-- **User Guide:** Included with installation
-- **Support Email:** inforeactormc@gmail.com
+- **User Guide**: See [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md)
+- **Build Guide**: See [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md)
+- **AI Maintainer Guide**: See [`docs/AI_MAINTAINER_GUIDE.md`](docs/AI_MAINTAINER_GUIDE.md)
 
----
+## Building from Source
 
-## What's Coming (Summer 2026)
+```bash
+pip install -r requirements.txt
+set PYTHONPATH=src
+python -m dynamicmc
+```
 
-The full version will include:
-- Real-time 3D visualization as you type
-- Continuous physics validation
-- Universal export to MCNP, OpenMC, and Serpent
-- Cross-platform support (Linux, macOS)
+Or use the dev launcher: `run_dynamicmc.bat`
 
----
+## About
 
-## Known Issues
-
-- Large files (>10,000 lines) may have reduced syntax highlighting performance
-- 3D preview limited to ~800 cylinders for optimal performance
-- Windows only (Linux/Mac support planned)
-
----
+- **Product**: OWEN v1.0.0
+- **Division**: DynamicMC (Software Development)
+- **Organization**: [ReactorMC](https://reactormc.com)
+- Website: https://reactormc.com
 
 ## License
 
-Copyright © 2025 ReactorMC. All rights reserved.
-
-This software is proprietary. Redistribution, modification, or commercial use is prohibited without written permission.
-
----
-
-## Contact
-
-For bug reports, feature requests, or commercial licensing inquiries:
-- **Email:** inforeactormc@gmail.com
-- **Website:** [https://reactormc.net](https://reactormc.net)
-
+Copyright 2025-2026 ReactorMC. All rights reserved.
