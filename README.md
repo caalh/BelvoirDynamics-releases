@@ -63,21 +63,34 @@ DynamicMC/
 - 500 MB free disk space
 - OpenGL 3.3+ compatible graphics
 
+## Security & Verification
+
+- **[SECURITY.md](SECURITY.md)** — Privacy policy, data handling, air-gapped use, vulnerability reporting.
+- **Verify before installing:** Use the checksums published on each [release](https://github.com/caalh/dynamicmc-releases/releases) page.
+- **Verification scripts:** Run `scripts/verify-installer.ps1` (Windows) or `scripts/verify-installer.sh` (Linux/WSL) with the expected hash from the release notes.
+
+```powershell
+# Example: verify your download
+.\scripts\verify-installer.ps1 -Path ".\DynamicMC-Setup-v1.0.0.exe" -ExpectedHash "<hash from release notes>"
+```
+
 ## Documentation
 
 - **User Guide**: See [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md)
-- **Build Guide**: See [`docs/BUILD_GUIDE.md`](docs/BUILD_GUIDE.md)
-- **AI Maintainer Guide**: See [`docs/AI_MAINTAINER_GUIDE.md`](docs/AI_MAINTAINER_GUIDE.md)
+- **Changelog**: See [`CHANGELOG.md`](CHANGELOG.md)
+- **Build from source**: See [DynamicMC](https://github.com/caalh/DynamicMC) (BUILD_GUIDE, AI_MAINTAINER_GUIDE)
 
 ## Building from Source
 
+Source code: **[DynamicMC](https://github.com/caalh/DynamicMC)**
+
 ```bash
+git clone https://github.com/caalh/DynamicMC.git
+cd DynamicMC
 pip install -r requirements.txt
 set PYTHONPATH=src
 python -m dynamicmc
 ```
-
-Or use the dev launcher: `run_dynamicmc.bat`
 
 ## About
 
