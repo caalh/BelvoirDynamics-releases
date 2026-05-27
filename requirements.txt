@@ -1,6 +1,12 @@
-# OWEN (DynamicMC) — Python dependencies
-# For dependency transparency. The released installer bundles these.
-# See: https://github.com/caalh/dynamicmc-releases
+# GROVES - Python dependencies (for transparency)
+#
+# The published Windows installer (GROVES-Setup-v*.exe) bundles a frozen Python
+# runtime with these libraries already included via PyInstaller. This file is here
+# so users and auditors can see exactly which third-party libraries ship inside the
+# binary.
+#
+# Source repository: https://github.com/caalh/BelvoirDynamics  (GROVES under groves/)
+# Releases:          https://github.com/caalh/BelvoirDynamics-releases
 
 PySide6>=6.7
 pyvista>=0.43

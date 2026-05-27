@@ -1,16 +1,40 @@
-# OWEN — Open Workflow for Engineered Neutronics
+# BelvoirDynamics Releases
 
-**A DynamicMC Product** | [ReactorMC](https://reactormc.com)
+**The canonical download repository for [BelvoirDynamics](https://github.com/caalh/BelvoirDynamics)** | [ReactorMC](https://reactormc.com)
 
-> **DynamicMC** is the software development division of [ReactorMC](https://reactormc.com).
-> **OWEN** is the first product from DynamicMC — a professional code editor and 3D
-> visualization tool for reactor physics simulations.
+> **BelvoirDynamics** is the software development division of [ReactorMC](https://reactormc.com).
+> This repository hosts signed Windows installers, checksums, release notes, and verification
+> scripts for BelvoirDynamics products. Source code lives in the
+> [BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics).
 
 ---
 
-## What is OWEN?
+## Products distributed here
 
-OWEN is a desktop text editor built for nuclear engineers. It supports four Monte Carlo
+| Product | Description | Platform | Distribution |
+|---|---|---|---|
+| **GROVES** | Desktop text editor and 3D viewer for Monte Carlo input files (MCNP, OpenMC, Serpent, SCONE) | Windows 10/11 (64-bit) | **This repo** — Inno Setup `.exe` installers |
+| **OWEN** | VS Code / Cursor extension for nuclear reactor modeling | VS Code, Cursor | Published to the [VS Code Marketplace](https://marketplace.visualstudio.com/) and [Open VSX Registry](https://open-vsx.org/) — **not hosted here** |
+
+Future BelvoirDynamics products that ship as standalone binaries will be added to this repo.
+
+---
+
+## Latest release — GROVES v1.0.1 (May 2026)
+
+**Rebrand release.** GROVES is the new name for the desktop editor previously distributed
+as "DynamicMC" / "OWEN (desktop)". The application is functionally compatible with v1.0.0
+and supports in-place upgrade (the Inno Setup `AppId` GUID is preserved).
+
+- **Download:** [v1.0.1 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.0.1)
+- **Installer:** `GROVES-Setup-v1.0.1.exe`
+- **Install path:** `C:\Program Files\ReactorMC\GROVES\` (moved from `\ReactorMC\DynamicMC\` in v1.0.0)
+- **Full changelog:** [`CHANGELOG.md`](CHANGELOG.md), with deeper engineering history in
+  [`BelvoirDynamics/AI_CHANGELOG.md`](https://github.com/caalh/BelvoirDynamics/blob/main/AI_CHANGELOG.md)
+
+### What is GROVES?
+
+GROVES is a desktop text editor built for nuclear engineers. It supports four Monte Carlo
 neutron transport codes:
 
 - **MCNP** input files
@@ -18,86 +42,92 @@ neutron transport codes:
 - **Serpent 2** input decks
 - **SCONE** input files
 
-## Features
+Features include syntax highlighting, a 3D geometry preview (PyVista), 2D cross-section
+views, a visual Lattice Builder, bundled templates, automatic language detection, a
+(experimental) MCNP ↔ OpenMC converter, and Dark / Marble themes.
 
-- Multi-tab code editor with syntax highlighting for all four codes
-- 3D geometry preview (PyVista) — visualize your reactor models
-- 2D cross-section views (radial XY, axial XZ)
-- **Lattice Builder** — visual grid tool to create lattice fill maps (MCNP, OpenMC, Serpent)
-- Built-in templates — start quickly with pin cells, assemblies, and core models
-- Smart analysis — automatic language detection and diagnostics
-- MCNP ↔ OpenMC bidirectional converter (experimental)
-- Dark and Marble themes
-- Block/column selection (Alt+drag or toggle button)
-- Standard shortcuts (Ctrl+S, Ctrl+O, Ctrl+T, etc.)
-- File tree navigation with minimap
+---
 
-## Quick Start
+## Download & install
 
-1. **Open a template**: Select from the dropdown, click "Load"
-2. **Edit your model**: Make changes in the editor
-3. **Build a lattice**: Click "Lattice Builder" or right-click → "Insert Lattice..."
-4. **Generate 3D preview**: Switch to "3D Preview" tab, select source, click "Generate"
-5. **Save your work**: Press Ctrl+S or click "Save"
+1. Go to the [Releases](https://github.com/caalh/BelvoirDynamics-releases/releases) page.
+2. Download `GROVES-Setup-v<version>.exe` and the published SHA-256 checksum.
+3. **Verify the checksum** (see below) before running the installer.
+4. Run the installer. Windows SmartScreen may warn about an unsigned binary — click
+   "More info" → "Run anyway" if you trust the source.
 
-## Project Structure
-
-```
-DynamicMC/
-├── src/dynamicmc/      # Application source code
-├── src/templates/      # Bundled template input files
-├── assets/             # Icons and fonts
-├── docs/               # Documentation (BUILD_GUIDE, USER_GUIDE, etc.)
-├── scripts/            # Utility scripts (icon generators, build helpers)
-├── installer/          # Inno Setup installer script
-├── tests/              # pytest tests
-├── launcher.py         # PyInstaller entry point
-├── build_installer.py  # Build script
-└── requirements.txt    # Python dependencies
-```
-
-## System Requirements
+### System requirements
 
 - Windows 10 or Windows 11 (64-bit)
 - 4 GB RAM minimum (8 GB recommended)
 - 500 MB free disk space
 - OpenGL 3.3+ compatible graphics
 
-## Security & Verification
+---
 
-- **[SECURITY.md](SECURITY.md)** — Privacy policy, data handling, air-gapped use, vulnerability reporting.
-- **Verify before installing:** Use the checksums published on each [release](https://github.com/caalh/dynamicmc-releases/releases) page.
-- **Verification scripts:** Run `scripts/verify-installer.ps1` (Windows) or `scripts/verify-installer.sh` (Linux/WSL) with the expected hash from the release notes.
+## Security & verification
+
+- **[SECURITY.md](SECURITY.md)** — privacy policy, data handling, air-gapped use,
+  vulnerability reporting.
+- **Verify before installing.** SHA-256 checksums are published on each
+  [release](https://github.com/caalh/BelvoirDynamics-releases/releases) page.
+- **Verification scripts:**
+  - Windows / PowerShell: [`scripts/verify-installer.ps1`](scripts/verify-installer.ps1)
+  - Linux / WSL / macOS: [`scripts/verify-installer.sh`](scripts/verify-installer.sh)
 
 ```powershell
-# Example: verify your download
-.\scripts\verify-installer.ps1 -Path ".\DynamicMC-Setup-v1.0.0.exe" -ExpectedHash "<hash from release notes>"
+# Windows / PowerShell
+.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.0.1.exe" -ExpectedHash "<hash from release notes>"
 ```
+
+```bash
+# Linux / WSL / macOS
+./scripts/verify-installer.sh GROVES-Setup-v1.0.1.exe <hash from release notes>
+```
+
+---
 
 ## Documentation
 
-- **User Guide**: See [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md)
-- **Changelog**: See [`CHANGELOG.md`](CHANGELOG.md)
-- **Build from source**: See [DynamicMC](https://github.com/caalh/DynamicMC) (BUILD_GUIDE, AI_MAINTAINER_GUIDE)
+- **User Guide:** [`docs/USER_GUIDE.md`](docs/USER_GUIDE.md) — quick-start for the
+  installed application. The canonical, full-length guide lives in the source repo:
+  [`BelvoirDynamics/groves/docs/USER_GUIDE.md`](https://github.com/caalh/BelvoirDynamics/blob/main/groves/docs/USER_GUIDE.md).
+- **Changelog:** [`CHANGELOG.md`](CHANGELOG.md)
+- **Release notes template:** [`RELEASE_NOTES_TEMPLATE.md`](RELEASE_NOTES_TEMPLATE.md) —
+  used by maintainers when publishing a new GROVES release.
 
-## Building from Source
+---
 
-Source code: **[DynamicMC](https://github.com/caalh/DynamicMC)**
+## Building from source
+
+Source code lives in the **[BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics)**
+(GROVES under `groves/`, OWEN under `owen/`).
 
 ```bash
-git clone https://github.com/caalh/DynamicMC.git
-cd DynamicMC
+git clone https://github.com/caalh/BelvoirDynamics.git
+cd BelvoirDynamics/groves
 pip install -r requirements.txt
 set PYTHONPATH=src
-python -m dynamicmc
+python -m groves
 ```
+
+See `groves/docs/BUILD_GUIDE.md` and `docs/AI_MAINTAINER_GUIDE.md` in the source repo for
+full build and packaging instructions.
+
+---
 
 ## About
 
-- **Product**: OWEN v1.0.0
-- **Division**: DynamicMC (Software Development)
-- **Organization**: [ReactorMC](https://reactormc.com)
-- Website: https://reactormc.com
+- **Division:** BelvoirDynamics (software development)
+- **Organization:** [ReactorMC](https://reactormc.com)
+- **Source code:** https://github.com/caalh/BelvoirDynamics
+- **Releases (this repo):** https://github.com/caalh/BelvoirDynamics-releases
+
+> Historical note: this repository was previously named `dynamicmc-releases` and
+> distributed the application under the names "DynamicMC" and "OWEN (desktop)". As of
+> GROVES v1.0.1 (May 2026) it has been renamed to `BelvoirDynamics-releases` to reflect
+> the new division name and product naming. Old release tags (≤ v1.0.0) remain available
+> for historical reference.
 
 ## License
 
