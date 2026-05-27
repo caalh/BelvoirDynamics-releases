@@ -1,47 +1,80 @@
 # Security Policy
 
+This policy covers binaries published in the
+[`BelvoirDynamics-releases`](https://github.com/caalh/BelvoirDynamics-releases)
+repository — currently the **GROVES** desktop editor. The OWEN VS Code / Cursor
+extension is distributed separately through the VS Code Marketplace and Open VSX
+Registry and is not in scope here.
+
 ---
 
-## OWEN Security & Privacy
+## GROVES Security & Privacy
 
-OWEN (Open Workflow for Engineered Neutronics) is a desktop text editor and 3D viewer for Monte Carlo input files (MCNP, OpenMC, Serpent, SCONE). We take security and user trust seriously.
+GROVES is a desktop text editor and 3D viewer for Monte Carlo input files (MCNP,
+OpenMC, Serpent, SCONE). We take security and user trust seriously.
 
-### What OWEN Does Not Do
+### What GROVES does not do
 
-- **No telemetry or analytics** — OWEN does not collect or transmit any usage data.
-- **No network access** — The application does not make outbound network requests during normal use.
-- **No data exfiltration** — Your input files, geometry, and any nuclear data stay on your machine.
+- **No telemetry or analytics** — GROVES does not collect or transmit any usage data.
+- **No network access** — The application does not make outbound network requests
+  during normal use.
+- **No data exfiltration** — Your input files, geometry, and any nuclear data stay on
+  your machine.
 
-### Data Handling
+### Data handling
 
-- All file operations are local. OWEN reads and writes files only on the user's filesystem.
+- All file operations are local. GROVES reads and writes files only on the user's
+  filesystem.
 - No data is sent to external servers.
 - The application can run fully offline after installation.
 
 ### Verification
 
 - SHA-256 checksums are published in each release's notes for integrity verification.
-- Download only from the official [Releases](https://github.com/caalh/dynamicmc-releases/releases) page.
-- Use the provided verification scripts (`scripts/verify-installer.ps1` or `scripts/verify-installer.sh`) to verify your download before installing.
+- Download only from the official
+  [Releases](https://github.com/caalh/BelvoirDynamics-releases/releases) page.
+- Use the provided verification scripts before installing:
 
-### Air-Gapped Use
+**Windows / PowerShell** ([`scripts/verify-installer.ps1`](scripts/verify-installer.ps1)):
 
-OWEN can be used in air-gapped or restricted environments:
+```powershell
+.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.0.1.exe" -ExpectedHash "<hash from release notes>"
+```
+
+**Linux / WSL / macOS** ([`scripts/verify-installer.sh`](scripts/verify-installer.sh)):
+
+```bash
+./scripts/verify-installer.sh GROVES-Setup-v1.0.1.exe <hash from release notes>
+```
+
+The scripts exit with status `0` on a successful match and `1` on mismatch (or print
+the computed hash if no expected value is supplied).
+
+### Air-gapped use
+
+GROVES can be used in air-gapped or restricted environments:
 
 1. Download the installer on a machine with internet access.
 2. Verify the SHA-256 checksum against the value published in the release notes.
-3. Transfer the installer via approved media (USB, internal network, etc.) to the target machine.
+3. Transfer the installer via approved media (USB, internal network, etc.) to the
+   target machine.
 4. Install and run. No internet connection is required.
 
-### Reporting a Vulnerability
+### Reporting a vulnerability
 
-If you believe you have found a security vulnerability in OWEN, please report it responsibly:
+If you believe you have found a security vulnerability in GROVES (or any other
+binary published from this repository), please report it responsibly:
 
 - **Email:** inforeactormc@gmail.com
-- **Subject:** [OWEN Security] Brief description
+- **Subject:** `[BelvoirDynamics Security] Brief description`
 
-We will acknowledge receipt and work with you to understand and address the issue. We ask that you do not disclose the vulnerability publicly until we have had a chance to respond.
+We will acknowledge receipt and work with you to understand and address the issue.
+We ask that you do not disclose the vulnerability publicly until we have had a chance
+to respond.
 
 ### Compliance
 
-If your organization handles sensitive or export-controlled nuclear data, follow your internal policies for software approval, air-gapped deployment, and data handling. OWEN is a general-purpose editor; it does not implement export controls or classification handling.
+If your organization handles sensitive or export-controlled nuclear data, follow your
+internal policies for software approval, air-gapped deployment, and data handling.
+GROVES is a general-purpose editor; it does not implement export controls or
+classification handling.
