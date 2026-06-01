@@ -38,13 +38,13 @@ OpenMC, Serpent, SCONE). We take security and user trust seriously.
 **Windows / PowerShell** ([`scripts/verify-installer.ps1`](scripts/verify-installer.ps1)):
 
 ```powershell
-.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.0.1.exe" -ExpectedHash "<hash from release notes>"
+.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.0.1.exe" -ExpectedHash "A15AFBFE7B2BAA34A14BE7AA5EDB8D37D39D158500F3A8D5FBA73E03EC767D2F"
 ```
 
 **Linux / WSL / macOS** ([`scripts/verify-installer.sh`](scripts/verify-installer.sh)):
 
 ```bash
-./scripts/verify-installer.sh GROVES-Setup-v1.0.1.exe <hash from release notes>
+./scripts/verify-installer.sh GROVES-Setup-v1.0.1.exe A15AFBFE7B2BAA34A14BE7AA5EDB8D37D39D158500F3A8D5FBA73E03EC767D2F
 ```
 
 The scripts exit with status `0` on a successful match and `1` on mismatch (or print
