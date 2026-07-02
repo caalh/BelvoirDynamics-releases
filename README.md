@@ -15,6 +15,7 @@
 |---|---|---|---|
 | **GROVES** | Desktop text editor and 3D viewer for Monte Carlo input files (MCNP, OpenMC, Serpent, SCONE) | Windows 10/11 (64-bit) | **This repo** — Inno Setup `.exe` installers |
 | **OWEN** | VS Code / Cursor extension for nuclear reactor modeling | VS Code, Cursor | Published to the [VS Code Marketplace](https://marketplace.visualstudio.com/) and [Open VSX Registry](https://open-vsx.org/) — **not hosted here** |
+| **NICHOLS** | Sublime Text & Notepad++ packages for Monte Carlo input decks | Sublime Text 4, Notepad++ 8.x | Zips on [caalh/nichols](https://github.com/caalh/nichols/releases) GitHub Releases — **not hosted here** |
 
 Future BelvoirDynamics products that ship as standalone binaries will be added to this repo.
 
@@ -101,7 +102,7 @@ views, a visual Lattice Builder, bundled templates, automatic language detection
 ## Building from source
 
 Source code lives in the **[BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics)**
-(GROVES under `groves/`, OWEN under `owen/`).
+(GROVES under `groves/`, OWEN under `owen/`, NICHOLS under `nichols/`).
 
 ```bash
 git clone https://github.com/caalh/BelvoirDynamics.git

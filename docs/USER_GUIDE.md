@@ -7,9 +7,10 @@
 
 GROVES (formerly distributed as "DynamicMC" / "OWEN desktop" through v1.0.0) is a
 desktop text editor and 3D viewer for Monte Carlo neutron transport input files. It
-is one of two products from the **BelvoirDynamics** division of
-[ReactorMC](https://reactormc.com); the other is the **OWEN** VS Code / Cursor
-extension, distributed separately on the VS Code Marketplace and Open VSX Registry.
+is one of three products from the **BelvoirDynamics** division of
+[ReactorMC](https://reactormc.com); its siblings are the **OWEN** VS Code / Cursor
+extension (VS Code Marketplace and Open VSX Registry) and the **NICHOLS** Sublime
+Text / Notepad++ packages ([caalh/nichols](https://github.com/caalh/nichols)).
 
 ---
 
