@@ -27,6 +27,10 @@ Future BelvoirDynamics products that ship as standalone binaries will be added t
 as "DynamicMC" / "OWEN (desktop)". The application is functionally compatible with v1.0.0
 and supports in-place upgrade (the Inno Setup `AppId` GUID is preserved).
 
+> Newer GROVES source releases (v1.1.0+) exist in the
+> [BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics); a rebuilt
+> installer will be published here when ready. v1.0.1 remains the latest installer.
+
 - **Download:** [v1.0.1 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.0.1)
 - **Installer:** `GROVES-Setup-v1.0.1.exe`
 - **Install path:** `C:\Program Files\ReactorMC\GROVES\` (moved from `\ReactorMC\DynamicMC\` in v1.0.0)
