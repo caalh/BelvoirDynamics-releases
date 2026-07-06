@@ -11,6 +11,42 @@ This file tracks user-visible changes to the **published installers** only.
 
 ---
 
+## [1.3.4] - 2026-07-06 — Feature release (installer catch-up)
+
+**First installer published since the v1.0.1 rebrand.** Bundles source releases v1.1.0
+through v1.3.4 into a single Windows installer.
+
+### Added (since v1.0.1)
+
+- **3D preview (v1.1.0):** fidelity Auto/Disc/Layers, solo layer, measurement tools
+  (distance, angle, radius), pick readout, component layer toggles, axial slice, 1.5M
+  instance budget, BEAVRS radial structure (barrel, shields, RPV, baffle boxes)
+- **Editor (v1.1.0):** MCNP references index + dock (F12/Shift+F12), line-length ruler,
+  4-palette highlight picker, settings dialog, deep validation
+- **Workflows (v1.1.0):** run simulation, parametric sweep, prebuilt models, community
+  library opt-in stub
+- **ALLEN (v1.2.0):** embedded matplotlib panel + browser shortcut to NRDP `/nrdp/allen`
+- **Results/Sweep (v1.3.0):** View Results dialog (k-eff, flux spectrum, tally table,
+  mesh heatmap); sweep dashboard; Verify Geometry with OpenMC
+- **PNNL materials (v1.3.3):** Insert PNNL Material picker — 411 materials from
+  PNNL-15870 Rev. 2 with per-code card generation
+- **Converter (v1.3.4):** hi-fi MCNP→OpenMC converter (beta, ported from OWEN v0.3.8);
+  legacy regex fallback; MCNP→Serpent/SCONE experimental
+
+### Compatibility
+
+- **In-place upgrade from v1.0.1 (or DynamicMC v1.0.0) is supported.** The Inno Setup
+  `AppId` GUID is preserved.
+- **Installer size:** ~356 MB (PyInstaller bundle with PySide6, PyVista, VTK).
+
+### Verification
+
+| File | SHA-256 |
+|------|---------|
+| `GROVES-Setup-v1.3.4.exe` | `1EA43724E23E825B4728DF4C6B44ECCEFA64F6DA749C64C2331E2D28E9A4B0B7` |
+
+---
+
 ## [1.0.1] - 2026-05-26 — GROVES rebrand
 
 **This is the first release published under the `BelvoirDynamics-releases` repository
