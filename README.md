@@ -21,19 +21,20 @@ Future BelvoirDynamics products that ship as standalone binaries will be added t
 
 ---
 
-## Latest release — GROVES v1.0.1 (May 2026)
+## Latest release — GROVES v1.3.4 (July 2026)
 
-**Rebrand release.** GROVES is the new name for the desktop editor previously distributed
-as "DynamicMC" / "OWEN (desktop)". The application is functionally compatible with v1.0.0
-and supports in-place upgrade (the Inno Setup `AppId` GUID is preserved).
+**Major feature release.** Catches up the Windows installer with source releases v1.1.0
+through v1.3.4: 3D preview enhancements, MCNP reference tracker, run simulation, parametric
+sweep, ALLEN cross-sections, results viewer, sweep dashboard, PNNL-15870 materials picker,
+hi-fi MCNP→OpenMC converter (beta), and OpenMC geometry verification.
 
-> Newer GROVES source releases (v1.1.0+) exist in the
-> [BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics); a rebuilt
-> installer will be published here when ready. v1.0.1 remains the latest installer.
+In-place upgrade from GROVES v1.0.1 (or DynamicMC v1.0.0) is supported — the Inno Setup
+`AppId` GUID is preserved.
 
-- **Download:** [v1.0.1 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.0.1)
-- **Installer:** `GROVES-Setup-v1.0.1.exe`
-- **Install path:** `C:\Program Files\ReactorMC\GROVES\` (moved from `\ReactorMC\DynamicMC\` in v1.0.0)
+- **Download:** [v1.3.4 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.3.4)
+- **Installer:** `GROVES-Setup-v1.3.4.exe` (~356 MB)
+- **SHA-256:** `1EA43724E23E825B4728DF4C6B44ECCEFA64F6DA749C64C2331E2D28E9A4B0B7`
+- **Install path:** `C:\Program Files\ReactorMC\GROVES\`
 - **Full changelog:** [`CHANGELOG.md`](CHANGELOG.md), with deeper engineering history in
   [`BelvoirDynamics/AI_CHANGELOG.md`](https://github.com/caalh/BelvoirDynamics/blob/main/AI_CHANGELOG.md)
 
@@ -47,9 +48,12 @@ neutron transport codes:
 - **Serpent 2** input decks
 - **SCONE** input files
 
-Features include syntax highlighting, a 3D geometry preview (PyVista), 2D cross-section
-views, a visual Lattice Builder, bundled templates, automatic language detection, a
-(experimental) MCNP ↔ OpenMC converter, and Dark / Marble themes.
+Features include syntax highlighting, a 3D geometry preview (PyVista) with BEAVRS radial
+structure and measurement tools, MCNP reference tracker, run simulation and parametric sweep,
+results viewer and sweep dashboard, PNNL-15870 materials picker (411 materials), hi-fi
+MCNP→OpenMC converter (beta), OpenMC geometry verification, ALLEN cross-sections panel,
+2D cross-section views, a visual Lattice Builder, bundled prebuilt models, and Dark /
+Marble themes.
 
 ---
 
@@ -82,12 +86,12 @@ views, a visual Lattice Builder, bundled templates, automatic language detection
 
 ```powershell
 # Windows / PowerShell
-.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.0.1.exe" -ExpectedHash "71A34E01467038237FC275D3DDA44809CDEF7EBAFDF15136C213E00F1AECC103"
+.\scripts\verify-installer.ps1 -Path ".\GROVES-Setup-v1.3.4.exe" -ExpectedHash "1EA43724E23E825B4728DF4C6B44ECCEFA64F6DA749C64C2331E2D28E9A4B0B7"
 ```
 
 ```bash
 # Linux / WSL / macOS
-./scripts/verify-installer.sh GROVES-Setup-v1.0.1.exe 71A34E01467038237FC275D3DDA44809CDEF7EBAFDF15136C213E00F1AECC103
+./scripts/verify-installer.sh GROVES-Setup-v1.3.4.exe 1EA43724E23E825B4728DF4C6B44ECCEFA64F6DA749C64C2331E2D28E9A4B0B7
 ```
 
 ---
