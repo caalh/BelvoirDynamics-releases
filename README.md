@@ -21,7 +21,21 @@ Future BelvoirDynamics products that ship as standalone binaries will be added t
 
 ---
 
-## Latest release — GROVES v1.3.4 (July 2026)
+## Latest release — GROVES v1.3.5 (July 2026)
+
+**Hotfix** for v1.3.4 launch crash (`QTextCharFormat` import missing in line-length ruler).
+
+In-place upgrade from GROVES v1.3.4 (or earlier) is supported — the Inno Setup `AppId` GUID
+is preserved.
+
+- **Download:** [v1.3.5 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.3.5)
+- **Installer:** `GROVES-Setup-v1.3.5.exe` (~356 MB)
+- **SHA-256:** `DC43057FA94E030B3C38F03417BA7AAD8EF6EF4AA41342FD9165FDFB0361D456`
+- **Install path:** `C:\Program Files\ReactorMC\GROVES\`
+- **Full changelog:** [`CHANGELOG.md`](CHANGELOG.md), with deeper engineering history in
+  [`BelvoirDynamics/AI_CHANGELOG.md`](https://github.com/caalh/BelvoirDynamics/blob/main/AI_CHANGELOG.md)
+
+### Previous release — GROVES v1.3.4 (July 2026)
 
 **Major feature release.** Catches up the Windows installer with source releases v1.1.0
 through v1.3.4: 3D preview enhancements, MCNP reference tracker, run simulation, parametric

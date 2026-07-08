@@ -11,6 +11,29 @@ This file tracks user-visible changes to the **published installers** only.
 
 ---
 
+---
+
+## [1.3.5] - 2026-07-08 — Hotfix (launch crash)
+
+Fixes a startup crash in v1.3.4 when the MCNP line-length ruler is enabled (default for
+new editors): missing `QTextCharFormat` import in `code_editor.py`.
+
+### Fixed
+
+- **`NameError: name 'QTextCharFormat' is not defined`** on launch — app now starts normally
+
+### Compatibility
+
+- **In-place upgrade from v1.3.4 (or earlier) is supported.** Same Inno Setup `AppId` GUID.
+
+### Verification
+
+| File | SHA-256 |
+|------|---------|
+| `GROVES-Setup-v1.3.5.exe` | `DC43057FA94E030B3C38F03417BA7AAD8EF6EF4AA41342FD9165FDFB0361D456` |
+
+---
+
 ## [1.3.4] - 2026-07-06 — Feature release (installer catch-up)
 
 **First installer published since the v1.0.1 rebrand.** Bundles source releases v1.1.0
