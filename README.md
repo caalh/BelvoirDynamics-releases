@@ -3,8 +3,8 @@
 **The canonical download repository for [BelvoirDynamics](https://github.com/caalh/BelvoirDynamics)** | [ReactorMC](https://reactormc.com)
 
 > **BelvoirDynamics** is the software development division of [ReactorMC](https://reactormc.com).
-> This repository hosts signed Windows installers, checksums, release notes, and verification
-> scripts for BelvoirDynamics products. Source code lives in the
+> This repository hosts **checksum-verified, unsigned** Windows installers, release notes, and
+> verification scripts for BelvoirDynamics products. Source code lives in the
 > [BelvoirDynamics monorepo](https://github.com/caalh/BelvoirDynamics).
 
 ---
