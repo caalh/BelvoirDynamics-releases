@@ -13,6 +13,39 @@ This file tracks user-visible changes to the **published installers** only.
 
 ---
 
+## [1.3.7] - 2026-07-09 — ALLEN async + speed
+
+Embedded ALLEN panel performance and responsiveness.
+
+### Fixed
+
+- **Embedded ALLEN panel** no longer blocks the UI while fetching index and cross-section curves
+  from reactormc.net — loading indicator, per-curve status, timeout error, **Open in browser instead** fallback
+
+### Performance
+
+- **Lazy Doppler tab** — fetch only when opened
+- **Parallel curve downloads** and **disk cache** (24h index / 7-day curves)
+- **Progressive σ(E) Explorer** — capture @ 294 K first, fission/elastic in background
+- **Startup index warm-cache**
+
+### SmartScreen
+
+The Windows installer is **unsigned**. SmartScreen may block it — use **More info → Run anyway**
+after verifying the SHA-256 below.
+
+### Compatibility
+
+- **In-place upgrade from v1.3.6 (or earlier) is supported.** Same Inno Setup `AppId` GUID.
+
+### Verification
+
+| File | SHA-256 |
+|------|---------|
+| `GROVES-Setup-v1.3.7.exe` | `E840B8DA0CD76F08F2338841E6B8C551F65989C4ADA2DD9F7F20B0E4D71BD4E7` |
+
+---
+
 ## [1.3.6] - 2026-07-08 — UX audit + integrated lattice editor
 
 UX adversarial audit fixes plus Input Builder integrated lattice editor.

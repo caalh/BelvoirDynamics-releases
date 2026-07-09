@@ -21,7 +21,23 @@ Future BelvoirDynamics products that ship as standalone binaries will be added t
 
 ---
 
-## Latest release — GROVES v1.3.6 (July 2026)
+## Latest release — GROVES v1.3.7 (July 2026)
+
+**Embedded ALLEN panel** async loading and speed improvements — non-blocking UI, lazy Doppler tab,
+parallel fetches, disk cache, progressive σ(E) Explorer, startup warm-cache.
+
+In-place upgrade from GROVES v1.3.6 (or earlier) is supported — the Inno Setup `AppId` GUID
+is preserved.
+
+- **Download:** [v1.3.7 release page](https://github.com/caalh/BelvoirDynamics-releases/releases/tag/v1.3.7)
+- **Installer:** `GROVES-Setup-v1.3.7.exe` (~356 MB)
+- **SHA-256:** `E840B8DA0CD76F08F2338841E6B8C551F65989C4ADA2DD9F7F20B0E4D71BD4E7`
+- **Install path:** `C:\Program Files\ReactorMC\GROVES\`
+- **SmartScreen:** installer is **unsigned** — see release notes for bypass guidance
+- **Full changelog:** [`CHANGELOG.md`](CHANGELOG.md), with deeper engineering history in
+  [`BelvoirDynamics/AI_CHANGELOG.md`](https://github.com/caalh/BelvoirDynamics/blob/main/AI_CHANGELOG.md)
+
+### Previous release — GROVES v1.3.6 (July 2026)
 
 **UX audit fixes** plus **Input Builder integrated lattice editor** — visual grid editor inside
 Snippet Wizards, 3D tab focus fix, ALLEN toolbar wiring, Validate Workspace menu.
