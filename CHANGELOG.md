@@ -13,14 +13,61 @@ This file tracks user-visible changes to the **published installers** only.
 
 ---
 
-## [1.3.5] - 2026-07-08 — Hotfix (launch crash)
+## [1.3.6] - 2026-07-08 — UX audit + integrated lattice editor
+
+UX adversarial audit fixes plus Input Builder integrated lattice editor.
+
+### Fixed
+
+- **3D Geometry Preview** now switches the main **3D Preview** tab (was targeting nested editor tabs)
+- **Toolbar ALLEN** opens embedded cross-section panel
+- **Matplotlib-missing** inline message in embedded ALLEN panel
+
+### Added
+
+- **Input Builder — integrated Lattice tab** — full visual grid editor inside Snippet Wizards; toolbar/menu **Lattice Builder** shortcuts open Input Builder on Lattice tab
+- **GROVES → Validate Workspace…** — re-run MCNP cross-file validation
+
+### Changed
+
+- **GROVES menu** grouped (Validate | Build | Simulate | Tools | Settings); tab-required actions gray out with tooltips
+
+### SmartScreen
+
+The Windows installer is **unsigned**. SmartScreen may block it — use **More info → Run anyway**
+after verifying the SHA-256 below.
+
+### Compatibility
+
+- **In-place upgrade from v1.3.5 (or earlier) is supported.** Same Inno Setup `AppId` GUID.
+
+### Verification
+
+| File | SHA-256 |
+|------|---------|
+| `GROVES-Setup-v1.3.6.exe` | `E764CB3CDCAB8FF6F9D4245F488FAA2FB43616745101ABC2E762E80EEF2E8C4D` |
+
+---
+
+## [1.3.5] - 2026-07-08 — Hotfix + UI themes
 
 Fixes a startup crash in v1.3.4 when the MCNP line-length ruler is enabled (default for
-new editors): missing `QTextCharFormat` import in `code_editor.py`.
+new editors): missing `QTextCharFormat` import in `code_editor.py`. Adds seven pickable
+editor UI themes.
 
 ### Fixed
 
 - **`NameError: name 'QTextCharFormat' is not defined`** on launch — app now starts normally
+
+### Added
+
+- **Seven UI themes** — Dark (default), Marble, Rome Marble, Gold, Ocean, Forest, Slate;
+  selectable in Settings or the toolbar; persisted in QSettings
+
+### SmartScreen
+
+The Windows installer is **unsigned**. SmartScreen may block it — use **More info → Run anyway**
+after verifying the SHA-256 below.
 
 ### Compatibility
 
@@ -30,7 +77,7 @@ new editors): missing `QTextCharFormat` import in `code_editor.py`.
 
 | File | SHA-256 |
 |------|---------|
-| `GROVES-Setup-v1.3.5.exe` | `DC43057FA94E030B3C38F03417BA7AAD8EF6EF4AA41342FD9165FDFB0361D456` |
+| `GROVES-Setup-v1.3.5.exe` | `1FDCE0A8E00E47635F43CD1C2E450A61A35033BAD2B88A2CC87C95036FD046A3` |
 
 ---
 
